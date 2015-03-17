@@ -424,8 +424,8 @@ $(OUTPUT_FILE): copy-redist
             self.copySample(toolsDir, toolsBinDir, 'NiViewer.Android', sourceSamplesDir = toolsSourceDir)
 
         # Documentation
-        docDir = os.path.join(self.outDir, 'Documentation')
-        self.copyDocumentation(docDir)
+        #docDir = os.path.join(self.outDir, 'Documentation')
+        #self.copyDocumentation(docDir)
 
         # Include
         if self.osName == 'Android':
