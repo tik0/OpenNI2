@@ -39,11 +39,6 @@ ALL_DRIVERS = \
 	Source/Drivers/PSLink \
 	Source/Drivers/OniFile
 
-# list all wrappers
-ALL_WRAPPERS = \
-	Wrappers/java/OpenNI.jni \
-	Wrappers/java/OpenNI.java 
-
 # list all tools
 ALL_TOOLS = \
 	Source/Drivers/PS1080/PS1080Console \
@@ -55,7 +50,6 @@ ALL_CORE_PROJS = \
 	$(OPENNI) \
 	$(DEPTH_UTILS) \
 	$(ALL_DRIVERS) \
-	$(ALL_WRAPPERS) \
 	$(ALL_TOOLS)
 
 # list all samples
@@ -65,10 +59,6 @@ CORE_SAMPLES = \
 	Samples/MultipleStreamRead \
 	Samples/MWClosestPoint \
 	Samples/MWClosestPointApp 
-
-# list all java samples
-JAVA_SAMPLES = \
-	Samples/SimpleViewer.java	
 
 ifeq "$(GLUT_SUPPORTED)" "1"
 	ALL_TOOLS += \
@@ -85,8 +75,7 @@ else
 endif
 
 ALL_SAMPLES = \
-	$(CORE_SAMPLES) \
-	$(JAVA_SAMPLES)
+	$(CORE_SAMPLES)
 
 # list all projects that are build
 ALL_BUILD_PROJS = \
